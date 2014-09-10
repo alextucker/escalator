@@ -1,0 +1,38 @@
+<div class="es-title-area">
+    <h1>Initiate Call</h1>
+</div>
+
+<div class="es-selector-area">
+    <p class="es-column-description">Select call recipients</p>
+
+    <div class="es-selector-tabs">
+        <div class="tab deactive">
+            Groups
+        </div>
+        <div class="tab active">
+            People
+        </div>
+    </div>
+
+    <ul class="es-selector-people">
+        <li ng-repeat="user in startCallData.userList track by user.id" ng-click="StartCall.addToCallList(user)">
+            <span class="es-letter-profile">{{ user.initials }}</span>
+            <span>{{ user.first_name }} {{ user.last_name }}</span>
+        </li>
+    </ul>
+</div>
+
+<div class="es-caller-area">
+    <p class="es-column-description">Call list</p>
+    <div class="es-call-cta" ng-click="StartCall.startCall(startCallData.callList)">
+        Initiate Call
+    </div>
+
+    <ul class="es-call-people">
+        <li ng-repeat="user in startCallData.callList track by user.id" ng-click="StartCall.removeFromCallList(user)">
+            <span class="es-letter-profile">{{ user.initials }}</span>
+            <span>{{ user.first_name }} {{ user.last_name }}</span>
+        </li>
+    </ul>
+</div>
+

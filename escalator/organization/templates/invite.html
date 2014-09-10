@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>Escalator Dashboard</title>
+    </head>
+
+    <body>
+        <h1>Invite</h1>
+        <p>You have been invited to join {{ organization.name }} on Escalator by {{ invite_user.first_name }}</p>
+        <a href="{% url 'social:begin' 'google-oauth2' %}">Login With Google</a>
+    </body>
+</html>

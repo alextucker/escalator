@@ -1,0 +1,21 @@
+<div class="es-sidebar" ng-controller="SidebarController">
+    <ul class="es-sidebar--items">
+        <li><a ng-class="{active: sidebarData.currentState == 'initiate'}" href="#/call">Initiate Call</li></li>
+        <li><a ng-class="{active: sidebarData.currentState == 'manageUsers'}" href="#/manage/users">Manage Users</a></li>
+    </ul>
+</div>
+
+<div class="es-topbar" ng-controller='TopbarController'>
+    <div class="logo-area">
+        <h1 class="es-logo">escalator</h1>
+        <h3 class="es-tagline">Incident Response Simplified</h3>
+    </div>
+
+    <div class="es-topbar--profile">
+        <p ng-show="topbarData.loading">loading...</p>
+        <p ng-hide="topbarData.loading">Hello {{ topbarData.user.first_name }}</p>
+    </div>
+</div>
+
+<div class="es-content-area" ng-view>
+</div>

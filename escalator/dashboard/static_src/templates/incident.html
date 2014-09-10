@@ -1,0 +1,29 @@
+<div class="es-title-area">
+    <h1>Incident</h1>
+</div>
+
+<div class="es-selector-area">
+    <p>Users</p>
+    <ul class="es-selector-people">
+        <li ng-show="incidentData.conference.users_incoming"><strong>Calling</strong></li>
+        <li ng-repeat="user in incidentData.conference.users_incoming track by user.id">
+            {{ user.first_name }} {{ user.last_name }}
+        </li>
+
+        <li ng-show="incidentData.conference.users_on_call"><strong>On Call</strong></li>
+        <li ng-repeat="user in incidentData.conference.users_on_call track by user.id">
+            {{ user.first_name }} {{ user.last_name }}
+        </li>
+
+        <li ng-show="incidentData.conference.users_not_in_call"><strong>Not In Call</strong></li>
+        <li ng-repeat="user in incidentData.conference.users_not_in_call track by user.id">
+            {{ user.first_name }} {{ user.last_name }}
+        </li>
+    </ul>
+</div>
+
+<div class="es-caller-area">
+    <p ng-show="incidentData.conference.has_active_calls">Confernce is live!</p>
+    <p ng-hide="incidentData.conference.has_active_calls">Confernce is over</p>
+</div>
+

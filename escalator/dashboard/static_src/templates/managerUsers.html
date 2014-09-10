@@ -1,0 +1,19 @@
+<div class="es-title-area">
+    <h1>Manage Users</h1>
+</div>
+
+<div class="es-selector-area">
+    <p>Users</p>
+    <ul class="es-selector-people">
+        <li ng-repeat="user in startCallData.userList track by user.id" ng-click="StartCall.addToCallList(user)">
+            {{ user.first_name }} {{ user.last_name }}
+        </li>
+    </ul>
+</div>
+
+<div class="es-caller-area">
+    <p>Invite</p>
+    <input ng-model="manageUserData.inviteEmail">
+    <button ng-click="ManageUsers.inviteUser(manageUserData.inviteEmail)">Invite</input>
+</div>
+

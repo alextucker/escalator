@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h1>Org Onboarding</h1>
+        <form action="/start/invite" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: $base-font-size;
+    background-color: $light-gray;
+    color: $dark-blue;
+    font-family: $montserrat;
+    min-height: 100%;
+}
+
+h1,h2,h3 {
+    font-family: $montserrat;
+}
+
+a {
+    color: $white;
+}
+
+.full-height {
+    min-height: 100%;
+}
+
+.outer-container {
+    @include outer-container;
+}

@@ -1,0 +1,15 @@
+{% load static from staticfiles %}
+<html>
+    <head>
+        <title>Escalator - Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="{% static "dashboard/dashboard.dist.css" %}">
+    </head>
+    <body>
+        <div ng-app="DashboardApp">
+            <div ng-controller="DashboardAppController" ng-include="'dashboardapp.html'" class="full-height outer-container"></div>
+        </div>
+        
+        {% csrf_token %}
+        <script src="{% static "dashboard/app.dist.js" %}"></script>
+    </body>
+</html>
